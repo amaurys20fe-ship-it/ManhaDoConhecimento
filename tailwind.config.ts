@@ -52,6 +52,21 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				// Custom Manhã do Conhecimento colors
+				sunrise: {
+					start: 'hsl(var(--sunrise-start))',
+					end: 'hsl(var(--sunrise-end))'
+				},
+				morning: {
+					sky: 'hsl(var(--morning-sky))',
+					cloud: 'hsl(var(--morning-cloud))'
+				},
+				knowledge: {
+					deep: 'hsl(var(--knowledge-deep))'
+				},
+				code: {
+					highlight: 'hsl(var(--code-highlight))'
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -84,11 +99,36 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0px)' },
+					'50%': { transform: 'translateY(-10px)' }
+				},
+				'glow': {
+					'0%': { boxShadow: '0 0 20px hsl(var(--sunrise-start) / 0.3)' },
+					'100%': { boxShadow: '0 0 30px hsl(var(--sunrise-start) / 0.6)' }
+				},
+				'sunrise': {
+					'0%': { opacity: '0', transform: 'translateY(20px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'float': 'float 6s ease-in-out infinite',
+				'glow': 'glow 2s ease-in-out infinite alternate',
+				'sunrise': 'sunrise 3s ease-out'
+			},
+			backgroundImage: {
+				'gradient-sunrise': 'var(--gradient-sunrise)',
+				'gradient-morning': 'var(--gradient-morning)',
+				'gradient-card': 'var(--gradient-card)'
+			},
+			boxShadow: {
+				'sunrise': 'var(--shadow-sunrise)',
+				'card-custom': 'var(--shadow-card)',
+				'floating': 'var(--shadow-floating)'
 			}
 		}
 	},
